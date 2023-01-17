@@ -1,1 +1,57 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  transition: all ease-in-out 0.5s;
+}
+
+.dark-light {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #dadada;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark-light:hover img {
+  filter: invert(0%) sepia(1%) saturate(3%) hue-rotate(357deg) brightness(11%) contrast(100%);
+  transition: 0.5s;
+}
+.dark-light:active {
+  background: #5267ee !important;
+}
+.dark-light:active img {
+  filter: invert(100%) sepia(79%) saturate(2%) hue-rotate(131deg) brightness(127%) contrast(100%);
+  fill: #fff;
+  transition: 0.5s;
+}
+
+.btn img {
+  content: url(../images/sun.svg) !important;
+  filter: invert(0%) sepia(1%) saturate(3%) hue-rotate(357deg) brightness(11%) contrast(100%) !important;
+}
+
+.btn {
+  transition: 0.5s;
+}
+.btn:hover img {
+  filter: invert(0%) sepia(1%) saturate(3%) hue-rotate(357deg) brightness(151%) contrast(100%) !important;
+}
+.btn:active {
+  background: #ec9f1a !important;
+}
+
+.dark {
+  background-color: rgba(38, 38, 38, 0.8);
+}/*# sourceMappingURL=main.css.map */
