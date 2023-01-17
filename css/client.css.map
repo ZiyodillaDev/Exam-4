@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"client.css"}
+{"version":3,"sources":["../scss/pages/client.scss","client.css"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,YAAA;ACCJ","file":"client.css"}

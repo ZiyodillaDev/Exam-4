@@ -1,10 +1,3 @@
-// Navbar Toggle
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
 
 // Options
 const selected = document.querySelector(".selected");
@@ -58,22 +51,3 @@ window.addEventListener("scroll", () => {
   }
 })
 
-// Dark-light
-const elMode =document.querySelector('.js-mode')
-let theme =false
-elMode.addEventListener('click', ()=>{
-    theme =!theme
-    const bg =theme ? 'dark':'light';
-    window.localStorage.setItem('theme',bg)
-    ChangeTheme()
-})
-function ChangeTheme() {
-    if (window.localStorage.getItem("theme" ) == "dark") {
-        document.body.classList.add('dark')
-        elMode.classList.add('btn')
-    }else{
-        document.body.classList.remove('dark')
-        elMode.classList.remove('btn')
-    }
-}
-ChangeTheme()

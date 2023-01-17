@@ -11,13 +11,20 @@
     />
     <link rel="stylesheet" href="./css/admin.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
   </head>
 
   <body class="bg-primary">
     <div>
       <div class="d-flex g-5">
         <div class="col-3 bg-warning" style="height: 100vh">
-          <h1 class="text-center">Logo</h1>
+          <div class="brand-title d-flex gap-2 align-items-center justify-content-center">
+            <a href="#"><img src="./images/laptop.gif" alt="logo"></a>
+            <a class="text-white fw-bold fs-4" href="#">TechGangs</a>
+          </div>
           <ul class="list-group pt-5">
             <button
               class="list-group-item mb-2 d-flex align-items-center gap-2"
@@ -39,109 +46,61 @@
             </button>
           </ul>
         </div>
-        <div class="col-9">
-          <h1 class="text-center">Admin Header</h1>
-          <div class="btn-group w-100 d-flex gap-5 flex-column flex-md-row">
-            <button class="btn btn-light">Samsung</button>
-            <button class="btn btn-light">Iphone</button>
-            <button class="btn btn-light">Redmi</button>
-            <button class="btn btn-light">Nokia</button>
+        <div class=" col-9">
+          <div class="d-flex align-items-center justify-content-between">
+
+              <h1 class="admin p-3 text-white">Admin header</h1>
+              <a href="./client.html"><button class="btn me-4 btn-success">Main</button></a>
           </div>
-          <button
-            type="button"
-            id="modal"
-            class="btn btn-success mt-5 ms-3 shadow"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-            data-bs-whatever="@mdo"
-          >
-            Add product +
-          </button>
 
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">
-                    Add product
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <div class="login_form">
-                    <form action="" class="form">
-                      <div class="form_div">
-                        <input
-                          type="text"
-                          class="form_input js-productName"
-                          placeholder=" "
-                        />
-                        <label for="" class="form_label">Product name</label>
-                      </div>
-                      <div class="form_div">
-                        <input
-                          type="number"
-                          class="form_input js-productPrice"
-                          placeholder=" "
-                        />
-                        <label for="" class="form_label">Product price</label>
-                      </div>
-                      <div class="form_div">
-                        <input
-                          type="file"
-                          class="form_input js-productImage"
-                          placeholder=" "
-                        />
-                        <label for="" class="form_label">Product image</label>
-                      </div>
-                      <div class="form_div">
-                        <div class="select-box">
-                          <div class="options-container">
-                            <div class="option">
-                              <option class="login text-black">Samsung</option>
-                            </div>
 
-                            <div class="option">
-                              <option class="register text-black">
-                                Iphone
-                              </option>
-                            </div>
-                            <div class="option">
-                              <option class="register text-black">Redmi</option>
-                            </div>
-                            <div class="option">
-                              <option class="register text-black">Nokia</option>
-                            </div>
+          <div>
+              <button type="button" class="btn modalbtn btn-success ms-3 mt-2" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal" data-bs-whatever="@mdo">ADD PRODUCT +</button>
+
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content js-form">
+                          <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
                           </div>
-
-                          <div class="selected text-black-50">
-                            Product category
+                          <div class="modal-body">
+                              <form>
+                                  <div class="mb-3">
+                                      <input type="text" name="name" class="js-name form-control" placeholder="Name">
+                                  </div>
+                                  <div class="mb-3">
+                                      <!-- <input type="text" name="desc" class="form-control js-desc"> -->
+                                      <textarea  class="js-desc form-control" placeholder="Description"></textarea>
+                                  </div>
+                                  <div class="mb-3">
+                                      <input type="file" name="img" class="js-file form-control">
+                                  </div>
+                                  <div class="mb-3">
+                                      <input class="js-price form-control" type="number" placeholder="Price">
+                                  </div>
+                                  <button type="button" class="btn btn-secondary"
+                                      data-bs-dismiss="modal">Close</button>
+                                  <button type="submit" data-bs-dismiss="modal" class="btn btn-primary">Send
+                                      message</button>
+                              </form>
                           </div>
-                        </div>
                       </div>
-                    </form>
                   </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">
-                    Add product
-                  </button>
-                </div>
               </div>
-            </div>
           </div>
-        </div>
+
+          <div class="d-flex js-list flex-wrap gap-3">
+
+
+          </div>
+          <hr>
+
+      </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
